@@ -20,6 +20,9 @@ The project follows a structured approach:
 3. **Model Evaluation using Performance Metrics**  
 4. **Business Impact Assessment**
 
+<img width="300" alt="Screenshot 2025-03-27 at 1 53 16 PM" src="https://github.com/user-attachments/assets/9c246654-df52-41e1-b9f3-24c9be5abf35" />
+
+
 ---
 
 ## Methodology
@@ -36,15 +39,25 @@ The project follows a structured approach:
   - `max_gift`, `mean_gift` – Highest and average donation amounts.
   - `age`, `income_high` – Donor demographic variables.
   - Others
+ 
+    <img width="355" alt="Screenshot 2025-03-27 at 1 53 44 PM" src="https://github.com/user-attachments/assets/2b93fdfb-a4a1-4e79-bc6d-3e972e681246" />  <img width="350" alt="Screenshot 2025-03-27 at 1 53 58 PM" src="https://github.com/user-attachments/assets/322eebfd-5fdb-44fa-9790-1414f7060f00" />
+
+
 
 ### 2. Exploratory Data Analysis (EDA)
 - **Initial data inspection** to check for missing values and data consistency.
 - **Visualisation of key features** to understand relationships with donation likelihood.
 
+<img width="400" alt="Screenshot 2025-03-27 at 1 53 31 PM" src="https://github.com/user-attachments/assets/6e751e53-289a-4867-905b-dbff88c26c53" />
+
+
 ### 3. Train-Test Split and Feature Selection
 - The dataset is split into **training and test sets** to assess model performance.
 - **Forward Stepwise Variable Selection** is used to identify the most important features.
 - **Overfitting Prevention**: Features are carefully chosen to balance predictive power and generalisability.
+
+<img width="350" alt="Screenshot 2025-03-27 at 1 48 29 PM" src="https://github.com/user-attachments/assets/d6e78185-4c33-4db9-a58c-9a532ce6a722" />
+
 
 ### 4. Model Training
 - **Logistic Regression** is used as the primary model for prediction.
@@ -55,13 +68,21 @@ The project follows a structured approach:
   - Evaluates the model’s ability to distinguish between donors and non-donors.
   - Limitations of AUC are discussed, emphasising why additional evaluation metrics are necessary.
 
+
+
 - **Cumulative Gains Curve**  
   - Illustrates how efficiently the model ranks high-probability donors.
   - A sharp rise at the start indicates that the model effectively captures donors early in the ranking.
 
+<img width="400" alt="Screenshot 2025-03-27 at 1 48 46 PM" src="https://github.com/user-attachments/assets/b12dad3e-98d9-438e-b935-c9f878ffd5bb" />
+
+
 - **Lift Curve**  
   - Measures how much better the model performs compared to random selection.
   - A **higher lift** at early percentages confirms the model successfully prioritises high-value donors.
+
+<img width="400" alt="Screenshot 2025-03-27 at 1 49 05 PM" src="https://github.com/user-attachments/assets/c25aa015-11c2-434b-837d-d2908735ec37" />
+
 
 ### 6. Business Impact - Cost Reduction Analysis
 - The model enables the non-profit to **reduce outreach costs by 40-50%** while still reaching nearly **80% of potential donors**.
@@ -81,6 +102,9 @@ The project follows a structured approach:
 - The **Cumulative Gains Curve and Lift Curve** confirm that the model is highly effective in prioritising donors.
 - **Outreach cost savings of 40-50%** are achieved while maintaining high donor coverage.
 
+<img width="400" alt="Screenshot 2025-03-27 at 1 49 19 PM" src="https://github.com/user-attachments/assets/187bf3b0-f3a1-4c64-83c8-3ee24872d640" />
+
+
 ---
 
 ## Real-World Applications
@@ -98,7 +122,7 @@ The approach used in this project can be applied to **various domains** beyond n
 This project demonstrates how **machine learning can optimize donor targeting**, reducing costs while maintaining high donor engagement. The results showcase how data-driven decision-making can improve fundraising efficiency for non-profits, with potential applications across other industries.
 
 ---
-## Logistic Regression as the Model-of-Choice
+## Logistic Regression as the Model of Choice
 
 1. Problem-Specific Choice
 The goal was to identify likely donors while keeping the model interpretable for real-world decision-making. Logistic regression provides clear insights into how donor characteristics influence donation likelihood, which is crucial for a non-profit’s strategy.
