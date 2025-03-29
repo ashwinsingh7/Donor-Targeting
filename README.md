@@ -125,7 +125,7 @@ This project demonstrates how **machine learning can optimize donor targeting**,
 ## Logistic Regression as the Model of Choice
 
 1. Problem-Specific Choice
-The goal was to identify likely donors while keeping the model interpretable for real-world decision-making. Logistic regression provides clear insights into how donor characteristics influence donation likelihood, which is crucial for a non-profit’s strategy.
+The goal was to identify likely donors while keeping the model explaining for real-world decision-making. Interpreting the logistic regression coefficients provides clear insights into how donor characteristics influence donation likelihood, which can be crucial for informing a non-profit’s strategy.
 
 4. Performance and Efficiency
 Logistic regression performed well in ranking donors, achieving a 40-50% reduction in outreach costs. Given the structured nature of the dataset and the binary nature of the problem, more complex models were unlikely to provide substantial gains while increasing complexity and computational cost.
