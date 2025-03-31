@@ -4,7 +4,7 @@ Google Colab link - https://colab.research.google.com/drive/10b0ksOIpYzqG2gkbrtC
 
 ## Overview
 
-This project aims to help a non-profit organisation **reduce outreach costs** by identifying which donors are most likely to contribute. Rather than sending donation requests to all previous donors — an expensive and inefficient approach — this project leverages **logistic regression** to prioritize a **subset of donors** with the highest probability of donating.  
+This project aims to help a non-profit organisation **reduce outreach costs** by identifying which donors are most likely to contribute. Rather than sending donation requests to all previous donors — an expensive and inefficient approach — this project leverages **logistic regression** to prioritise a **subset of donors** with the highest probability of donating.  
 
 The model's effectiveness is evaluated using performance metrics such as **Cumulative Gains Curve, Lift Curve, and AUC**, demonstrating significant improvements in targeting efficiency.
 
@@ -12,13 +12,14 @@ The model's effectiveness is evaluated using performance metrics such as **Cumul
 
 ## Project Goal
 
-The objective is to develop a predictive model that helps the non-profit **identify high-potential donors**. Instead of sending outreach messages to everyone, the organization can **focus resources on a smaller subset** of donors, improving efficiency while maintaining donation levels.  
+The objective is to develop a predictive model that helps the non-profit organisation **identify high-potential donors**. Instead of sending outreach messages to everyone, the organisation can **focus resources on a smaller subset** of donors, thereby significantly reducing donor costs while retaining a majority of donations.  
 
 The project follows a structured approach:
-1. **Data Analysis and Preprocessing**  
-2. **Feature Selection and Model Training**  
-3. **Model Evaluation using Performance Metrics**  
-4. **Business Impact Assessment**
+- **Data Analysis and Preprocessing**  
+- **Feature Selection and Model Training**  
+- **Model Evaluation using Performance Metrics**  
+- **Business Impact Assessment**
+- **Model Interpretation and Explaining Coefficients**
 
 <img width="300" alt="Screenshot 2025-03-27 at 1 53 16 PM" src="https://github.com/user-attachments/assets/9c246654-df52-41e1-b9f3-24c9be5abf35" />
 
@@ -73,20 +74,24 @@ The project follows a structured approach:
 - **Cumulative Gains Curve**  
   - Illustrates how efficiently the model ranks high-probability donors.
   - A sharp rise at the start indicates that the model effectively captures donors early in the ranking.
+  - The chart below indicates that when the donors are ranked in descending order of donation likelihood (as predicted by the logistic regression model), then:
+    - the top 20% captures 60% of donors
+    - the top 40% captures 80% of donors
+    - and the top 50% captures ~90% of donors
 
 <img width="400" alt="Screenshot 2025-03-27 at 1 48 46 PM" src="https://github.com/user-attachments/assets/b12dad3e-98d9-438e-b935-c9f878ffd5bb" />
 
 
 - **Lift Curve**  
   - Measures how much better the model performs compared to random selection.
-  - A **higher lift** at early percentages confirms the model successfully prioritises high-value donors.
+  - A **higher lift** at early percentages confirms the model successfully prioritises promising donors.
 
 <img width="400" alt="Screenshot 2025-03-27 at 1 49 05 PM" src="https://github.com/user-attachments/assets/c25aa015-11c2-434b-837d-d2908735ec37" />
 
 
 ### 6. Business Impact - Cost Reduction Analysis
 - The model enables the non-profit to **reduce outreach costs by 40-50%** while still reaching nearly **80% of potential donors**.
-- These savings translate into **financial and resource efficiency gains**, allowing funds to be allocated more effectively.
+- These savings translate into **financial and resource efficiency gains**, allowing funds to be saved and allocated more effectively.
 
 ### 7. Model Interpretation and Explainability
 - Model coefficients were interpreted and analysed to understand relative feature importance.
@@ -98,9 +103,9 @@ The project follows a structured approach:
 ## Results and Key Insights
 
 - The **logistic regression model** successfully **ranks donors by probability of donation**, significantly improving outreach efficiency.
-- **At 20% of the test data**, approximately **60% of donors** have already been identified, while **at 40% of the test data** approximately **80% of the donors** were identified.
+- **At 20% of the test data**, approximately **60% of donors** have already been identified; **at 40% of the test data** approximately **80% of the donors** were identified; and **at 50% of test data**, close to **90% of donors** were captured.
 - The **Cumulative Gains Curve and Lift Curve** confirm that the model is highly effective in prioritising donors.
-- **Outreach cost savings of 40-50%** are achieved while maintaining high donor coverage.
+- **Outreach cost savings of 40-50%** are achieved while maintaining high donor coverage - leading to a siginificant outreach cost reduction while still capturing a high percentage of donors.
 
 <img width="400" alt="Screenshot 2025-03-27 at 1 49 19 PM" src="https://github.com/user-attachments/assets/187bf3b0-f3a1-4c64-83c8-3ee24872d640" />
 
@@ -119,21 +124,25 @@ The approach used in this project can be applied to **various domains** beyond n
 
 ## Conclusion
 
-This project demonstrates how **machine learning can optimize donor targeting**, reducing costs while maintaining high donor engagement. The results showcase how data-driven decision-making can improve fundraising efficiency for non-profits, with potential applications across other industries.
+This project demonstrates how **machine learning can help optimise donor targeting**, reducing costs while maintaining high donor engagement. The results showcase how data-driven decision-making can improve fundraising efficiency for non-profits, with potential applications across other industries.
 
 ---
 ## Logistic Regression as the Model of Choice
 
 1. Problem-Specific Choice
-The goal was to identify likely donors while keeping the model explaining for real-world decision-making. Interpreting the logistic regression coefficients provides clear insights into how donor characteristics influence donation likelihood, which can be crucial for informing a non-profit’s strategy.
+   
+The goal was to identify likely donors while keeping the model explainable for real-world decision-making. Interpreting the logistic regression coefficients provides clear insights into how donor characteristics influence donation likelihood, which can be crucial for informing a non-profit’s strategy.
 
-4. Performance and Efficiency
-Logistic regression performed well in ranking donors, achieving a 40-50% reduction in outreach costs. Given the structured nature of the dataset and the binary nature of the problem, more complex models were unlikely to provide substantial gains while increasing complexity and computational cost.
+2. Performance and Efficiency
 
-5. Avoiding Overfitting
+Logistic regression performed well in ranking donors, achieving a 40-50% reduction in outreach costs. Given the structured nature of the dataset and the binary nature of the problem, more complex models may be unlikely to provide substantial gains while increasing complexity and computational cost.
+
+3. Avoiding Overfitting
+
 Tree-based models like Random Forest and XGBoost can overfit on smaller datasets, especially when features are limited. Logistic regression, combined with proper feature selection, generalises well without excessive tuning.
 
-6. Business & Deployment Considerations
-For practical applications, non-profits are likely to prefer simple, explainable models that can be deployed easily without requiring advanced infrastructure or extensive model monitoring.
+4. Business & Deployment Considerations
 
-Of course, more advanced models like decision trees or ensemble methods could be tested, but given the results, logistic regression provided an reaonsably good balance of performance, interpretability, and ease of implementation.
+For practical applications, non-profits are likely to prefer simple, explainable models that can be deployed easily without requiring advanced infrastructure or extensive model monitoring. Additionally, the interpretability of logistic regression makes it a suitable choice to present to business stakeholders who may prefer explainable methods to black-box techniques.
+
+Of course, more advanced models like decision trees or ensemble methods could be tested, but given the results, logistic regression provided a very good balance of performance, interpretability, and ease of implementation.
