@@ -143,6 +143,6 @@ Tree-based models like Random Forest and XGBoost can overfit on smaller datasets
 
 4. Business & Deployment Considerations
 
-For practical applications, non-profits are likely to prefer simple, explainable models that can be deployed easily without requiring advanced infrastructure or extensive model monitoring. Additionally, the interpretability of logistic regression makes it a suitable choice to present to business stakeholders who may prefer explainable methods to black-box techniques.
+For practical applications, non-profits are likely to prefer simple, explainable models that can be deployed easily without requiring advanced infrastructure or extensive model monitoring. Additionally, the interpretability of logistic regression makes it a suitable choice to present to business stakeholders who may prefer explainable methods over black-box techniques.
 
 Of course, more advanced models like decision trees or ensemble methods could be tested, but given the results, logistic regression provided a very good balance of performance, interpretability, and ease of implementation.
